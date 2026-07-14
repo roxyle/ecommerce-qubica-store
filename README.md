@@ -32,7 +32,7 @@ ENG: I opened and read the PDF containing the requirements.
 
 2. ITA: Ho redatto una bozza dei punti chiave.  
 ENG: I drafted a document outlining the key points.
-![myAnalysis](.git/images/photo_2026-07-13_20-10-19.jpg)
+![myAnalysis](docs/images/photo_2026-07-13_20-10-19.jpg)
 
 1. ITA: Ho scaffoldato il progetto con React + Next.js (strumenti che sono abituata ad utilizzare).  
 ENG: I set up a project scaffold using React + Next.js (the tools I usually work with).
@@ -97,7 +97,7 @@ ENG: If everything looks good, let's proceed with installing React Router DOM us
 ITA: Per poter scrivere il file types/product.ts mi serve sapere che com'è strutturato il payload Json che arriverà da FakeStoreApi, vado quindi a vedere la documentazione riportata nel sito e imposto di conseguenza le coppie chiave:valore 
 
 ENG: Before writing the types/product.ts file, I need to know the structure of the JSON payload returned by the FakeStoreApi, so I checked the official documentation on their website and set up the key:value pairs accordingly
-![esempio di response](.git/images/fakeStoreApiResponse.png)
+![esempio di response](docs/images/fakeStoreApiResponse.png)
 
 ```
 export type Product = {
@@ -114,4 +114,4 @@ export type Product = {
 ITA: eseguita una chiamata GET (ho utilizzato ARC) per prodotto presente che restituisce risposta 200 ok e una chiamata GET per prodotto sicuramente non presente, per verificare il tipo di errore da gestire. Al contrario di quel che pensavo, ovvero che restituisse un errore 404 not found, l'API restituisce comunque status 200 ok però col body vuoto.
 
 ENG: I performed a GET request (using ARC) for an existing product, which returned a 200 OK response, and another GET request for a non-existent product to check how errors are handled. Contrary to what I expected—which was a 404 Not Found error, the API still returns a 200 OK status, but with an empty body.
-![prodotto presente](.git/images/ArcTest200ok.png) ![prodotto assente](.git/images/ArcTestKO.png)
+![prodotto presente](docs/images/ArcTest200ok.png) ![prodotto assente](docs/images/ArcTestKO.png)
