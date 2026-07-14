@@ -1,6 +1,6 @@
 # Fake Store API E-commerce web app
 
-ITA: Questo è un esercizio fatto come Junior Web engineer: una e-commerce web app che mostra i prodotti e le categorie prese da Fake Store API, con una visualizzazione del dettaglio prodotto e filtraggio delle categorie sincronizzate all'URL
+ITA: Questo è un esercizio fatto come Junior Web engineer: una e-commerce web app in TypeScript che mostra i prodotti e le categorie prese da Fake Store API, con una visualizzazione del dettaglio prodotto e filtraggio delle categorie sincronizzate all'URL
 
 
 ENG: This is a Junior Web Eng tech exercise: 
@@ -32,12 +32,12 @@ ENG: I opened and read the PDF containing the requirements.
 
 2. ITA: Ho redatto una bozza dei punti chiave.  
 ENG: I drafted a document outlining the key points.
-![myAnalysis](public/photo_2026-07-13_20-10-19.jpg)
+![myAnalysis](.git/images/photo_2026-07-13_20-10-19.jpg)
 
-3. ITA: Ho scaffoldato il progetto con React + Next.js (strumenti che sono abituata ad utilizzare).  
+1. ITA: Ho scaffoldato il progetto con React + Next.js (strumenti che sono abituata ad utilizzare).  
 ENG: I set up a project scaffold using React + Next.js (the tools I usually work with).
 
-4. ITA: Ho chiesto a Claude di revisionare il mio documento e controllare se avessi dimenticato qualcosa.  
+1. ITA: Ho chiesto a Claude di revisionare il mio documento e controllare se avessi dimenticato qualcosa.  
 ENG: I asked Claude to review my document and check if I had missed anything.
 
 
@@ -81,7 +81,13 @@ ITA: Eseguiamo il comando:
 
  ```npm run dev``` 
 
- 
+ITA: se tutto ok, procediamo ad installare React Router DOM col comando 
+```npm install react-router-dom```
+in modo da associare URL specifici alle componenti, e rendere navigazione e componenti dinamici
+
+ENG: If everything looks good, let's proceed with installing React Router DOM using the command ```npm install react-router-dom``` in order to link specific URLs to components, and making both navigation and components dynamic.
+
+
 ---
 
 🚧 Lavori in corso 🚧 Work in progress 🚧
