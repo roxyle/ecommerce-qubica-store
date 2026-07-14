@@ -41,7 +41,7 @@ ENG: I set up a project scaffold using React + Next.js (the tools I usually work
 ENG: I asked Claude to review my document and check if I had missed anything.
 
 
-ITA: Col senno di poi, avrei dovuto invertire i passaggi 3 e 4. Dopo aver validato la mia checklist, Claude mi ha suggerito di usare Vite invece di Next.js dal momento che l'app che andremo a costruire è quasi interamente lato client, quindi avrei finito comunque per scrivere quasi tutto come Client Component ("use client") perdendo il vantaggio di Next che è quello di ridurre JS lato client con i Server Components, finendo anche per rischiare errori di hydratation (il server dice una cosa, il browser ne dice un’altra e React non sa quale credere) o di suspense (React sta aspettando qualcosa, ma quel “qualcosa” non arriva nel modo giusto).
+ITA: Col senno di poi, avrei dovuto invertire i passaggi 3 e 4. Dopo aver validato la mia checklist, Claude mi ha suggerito di usare Vite invece di Next.js dal momento che l'app che andremo a costruire è quasi interamente lato client, quindi avrei finito comunque per scrivere quasi tutto come Client Component ("use client") perdendo il vantaggio di Next che è quello di ridurre JS lato client con i Server Components, finendo anche per rischiare errori di hydration (il server dice una cosa, il browser ne dice un’altra e React non sa quale credere) o di suspense (React sta aspettando qualcosa, ma quel “qualcosa” non arriva nel modo giusto).
 
 ENG: In hindsight, I should have swapped steps 3 and 4. 
 After validating my checklist, Claude advised me to use Vite instead of Next.js since the app I'm building is almost entirely client-side, I would have ended up marking almost everything with "use client", and this would defeat the main purpose of Next.js (which is reducing client-side JS through Server Components) also risking hydration errors (where the server says one thing, the browser says another, and React gets confused) or suspense issues (where React is waiting for something that doesn't arrive properly).
@@ -113,5 +113,5 @@ export type Product = {
 
 ITA: eseguita una chiamata GET (ho utilizzato ARC) per prodotto presente che restituisce risposta 200 ok e una chiamata GET per prodotto sicuramente non presente, per verificare il tipo di errore da gestire. Al contrario di quel che pensavo, ovvero che restituisse un errore 404 not found, l'API restituisce comunque status 200 ok però col body vuoto.
 
-ENG: I performed a GET request (using ARC) for an existing product, which returned a 200 OK response, and another GET request for a non-existent product to check how errors are handled. Contrary to what I expected—which was a 404 Not Found error, the API still returns a 200 OK status, but with an empty body.
+ENG: I performed a GET request (using ARC) for an existing product, which returned a 200 OK response, and another GET request for a non-existent product to check how errors are handled. Contrary to what I expected, which was a 404 Not Found error, the API still returns a 200 OK status, but with an empty body.
 ![prodotto presente](docs/images/ArcTest200ok.png) ![prodotto assente](docs/images/ArcTestKO.png)
