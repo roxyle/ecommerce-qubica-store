@@ -1,12 +1,19 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Dependencies
-node_modules/
+node_modules
 
 # Build output
-dist/
-dist-ssr/
-build/
+dist
+dist-ssr
+build
 
 # Environment variables (contengono chiavi/secrets, non vanno mai committati)
 .env
@@ -15,22 +22,15 @@ build/
 .env.test.local
 .env.production.local
 
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-logs/
-*.log
-
-# Editor / IDE
+# Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea/
+.idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+*.sw?
 
 # OS files
 .DS_Store
@@ -47,10 +47,6 @@ coverage/
 .vite/
 vite.config.ts.timestamp-*
 vite.config.js.timestamp-*
-
-# Editor swap files
-*.swp
-*.swo
 
 # Local override files
 *.local
