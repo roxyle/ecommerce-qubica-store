@@ -93,3 +93,20 @@ ENG: If everything looks good, let's proceed with installing React Router DOM us
 🚧 Lavori in corso 🚧 Work in progress 🚧
 ---
 ---
+
+ITA: Per poter scrivere il file types/product.ts mi serve sapere che com'è strutturato il payload Json che arriverà da FakeStoreApi, vado quindi a vedere la documentazione riportata nel sito e imposto di conseguenza le coppie chiave:valore 
+
+ENG: Before writing the types/product.ts file, I need to know the structure of the JSON payload returned by the FakeStoreApi, so I checked the official documentation on their website and set up the key:value pairs accordingly
+![esempio di response](.git/images/fakeStoreApiResponse.png)
+
+```
+export type Product = {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string
+
+}
+```
