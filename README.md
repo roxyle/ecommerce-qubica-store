@@ -110,3 +110,8 @@ export type Product = {
 
 }
 ```
+
+ITA: eseguita una chiamata GET (ho utilizzato ARC) per prodotto presente che restituisce risposta 200 ok e una chiamata GET per prodotto sicuramente non presente, per verificare il tipo di errore da gestire. Al contrario di quel che pensavo, ovvero che restituisse un errore 404 not found, l'API restituisce comunque status 200 ok però col body vuoto.
+
+ENG: I performed a GET request (using ARC) for an existing product, which returned a 200 OK response, and another GET request for a non-existent product to check how errors are handled. Contrary to what I expected—which was a 404 Not Found error, the API still returns a 200 OK status, but with an empty body.
+![prodotto presente](.git/images/ArcTest200ok.png) ![prodotto assente](.git/images/ArcTestKO.png)
