@@ -1,30 +1,38 @@
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom'
 import './App.css'
+import Header from './components/Header/Header'
+import Home from './pages/Home'
+import ProductDetail from './pages/ProductDetail'
+
+
+function ProductDetailRoute() {
+
+  const {id}= useParams()
+
+  return <ProductDetail key={id}/>
+}
 
 function App() {
 
+
+
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          
-        </div>
-        <div>
-          <h1>Qubica Store</h1>
-        </div>
-      </section>
+      <BrowserRouter>
+        <Header/>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/product/:id" element={<ProductDetailRoute/>} />
 
-      <div className="ticks"></div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <h2>Explore our categories</h2>
+          </Routes>
 
-        </div>
-
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+        </main>
+      
+      </BrowserRouter>
+    
+      
     </>
   )
 }
