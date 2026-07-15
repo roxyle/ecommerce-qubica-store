@@ -120,4 +120,14 @@ ENG: I performed a GET request (using ARC) for an existing product, which return
 ![prodotto presente](docs/images/ArcTest200ok.png) ![prodotto assente](docs/images/ArcTestKO.png)
 
 ---
+ITA: Arrivata alla fine del giorno 2, con la parte di dati/tipi/API completata ma senza ancora nessuna UI visibile, percepivo il progetto come "indietro" nonostante le fondamenta fossero solide. Ho chiesto a Claude di aiutarmi a suddividere il lavoro rimanente in sprint giornalieri, agganciati agli Acceptance Criteria, per avere uno stato di avanzamento concreto invece di una sensazione vaga di ritardo.
 
+ENG: By the end of day 2, with the data/types/API layer done but no UI yet visible, I felt like the project was "behind" despite having solid foundations in place. I asked Claude to help me break the remaining work into daily sprints, tied to the Acceptance Criteria, so I'd have a concrete progress marker instead of a vague sense of falling behind.
+
+ITA: Giorno 3. Completato lo Sprint 1: routing con react-router-dom, Header con categorie fetchate dinamicamente dall'API, Home con griglia prodotti e filtro per categoria sincronizzato con la query string dell'URL, pagina di dettaglio prodotto con stati distinti di caricamento/errore.
+
+ENG: Day 3. Completed Sprint 1: routing with react-router-dom, Header with categories fetched dynamically from the API, Home with a product grid and category filter synced to the URL query string, product detail page with distinct loading/error states.
+
+ITA: Nota tecnica interessante: React ha segnalato un warning (`react-hooks/set-state-in-effect`) sul reset manuale dello stato dentro un useEffect al cambio di un parametro. Ho chiesto a Claude di spiegarmelo, e la sua spiegazione rimandava alla documentazione ufficiale React sulla gestione dello stato nei componenti. L'ho verificata leggendo la pagina linkata. La soluzione (rimontare il componente tramite una key legata all'id, invece di resettare lo stato a mano) è quella consigliata dalla documentazione stessa.
+
+ENG: An interesting technical note: React flagged a warning (`react-hooks/set-state-in-effect`) about manually resetting state inside a useEffect when a parameter changes. I asked Claude to explain it, and the explanation pointed to React's own official documentation on state handling, which I verified by reading the linked page myself. The fix (remounting the component via a key tied to the id, instead of manually resetting state) is the one recommended by the documentation itself.
