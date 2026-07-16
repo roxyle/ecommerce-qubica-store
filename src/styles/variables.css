@@ -1,0 +1,156 @@
+/*
+============================================================
+DESIGN TOKENS - Qubica Store
+============================================================
+Questo file e' l'unico punto del progetto dove compaiono
+valori "grezzi" (colori esadecimali, pixel, secondi).
+Ogni componente (.module.css) deve richiamare questi nomi
+con var(--nome), non scrivere mai un valore diretto.
+
+Se un domani cambia il colore del brand, si modifica una
+riga sola qui, non ogni singolo componente.
+============================================================
+*/
+
+:root {
+
+/* --------------------------------------------------------
+    1. SFONDI
+    Superfici di base della UI: sfondo pagina e sfondo
+    "alzato" per card/elementi che devono distinguersi
+    dallo sfondo pagina.
+    -------------------------------------------------------- */
+--bg-primary: #FFFFFF;
+--bg-secondary: #F3F4F6;
+
+/* --------------------------------------------------------
+    2. TESTO
+    Testo principale (titoli, prezzi) e testo secondario
+    (descrizioni, etichette meno importanti).
+    -------------------------------------------------------- */
+--text-primary: #111827;
+--text-secondary: #4B5563;
+
+/* --------------------------------------------------------
+    3. BRAND E ACCENTI
+    Colore identificativo del negozio: badge categoria,
+    link, elementi decorativi. NON usare per sfondi pieni
+    di bottoni (vedi sezione 4) - qui il colore cambia tra
+    tema chiaro/scuro per restare leggibile su testo/linee
+    sottili, non su superfici piene.
+    -------------------------------------------------------- */
+--color-brand: #4F46E5;
+--color-brand-hover: #3730A3;
+--color-accent: #D97706;
+
+/* --------------------------------------------------------
+    4. BOTTONI
+    Colori dedicati e FISSI (non cambiano tra tema chiaro
+    e scuro). Motivo: un bottone e' una superficie piena con
+    testo sopra, richiede un contrasto verificato che regge
+    a prescindere dal tema - vedi nota in fondo al file.
+    -------------------------------------------------------- */
+--color-button-bg: #4F46E5;
+--color-button-bg-hover: #3730A3;
+--color-button-text: #FFFFFF;
+
+/* --------------------------------------------------------
+    5. STATO / FEEDBACK
+    Comunicano una condizione: errore, bordo di separazione
+    tra elementi.
+    -------------------------------------------------------- */
+--color-error: #D32F2F;
+--color-border: #E5E7EB;
+
+/* --------------------------------------------------------
+    6. SPAZIATURA
+    Scala unica di spazi (margini, padding, gap) - usare
+    sempre questi valori invece di numeri a caso, cosi'
+    il ritmo visivo resta coerente in tutto il sito.
+    -------------------------------------------------------- */
+--spacing-xs: 4px;
+--spacing-sm: 8px;
+--spacing-md: 16px;
+--spacing-lg: 24px;
+--spacing-xl: 40px;
+
+/* --------------------------------------------------------
+    7. TIPOGRAFIA
+    Famiglia del font e scala delle dimensioni testo.
+    -------------------------------------------------------- */
+--font-family-base: system-ui, -apple-system, sans-serif;
+--font-size-sm: 0.875rem;
+--font-size-base: 1rem;
+--font-size-lg: 1.25rem;
+--font-size-xl: 2rem;
+
+/* --------------------------------------------------------
+    8. FORME
+    Raggio degli angoli arrotondati, usato su card e bottoni.
+    -------------------------------------------------------- */
+--border-radius: 8px;
+
+/* --------------------------------------------------------
+    9. MOVIMENTO
+    Durata/curva delle transizioni (hover, cambio tema).
+    -------------------------------------------------------- */
+--transition-base: 0.2s ease;
+
+/* --------------------------------------------------------
+    10. ACCESSIBILITA'
+    Contorno visibile quando si naviga con Tab da tastiera.
+    -------------------------------------------------------- */
+--outline-focus: 3px solid var(--color-accent);
+}
+
+/*
+============================================================
+TEMA SCURO
+============================================================
+Sovrascrive solo le variabili che devono cambiare con
+[data-theme="dark"] impostato su <html> o <body>.
+Tutto cio' che non e' elencato qui (spaziature, font,
+bottoni, colori di stato) resta identico in entrambi i temi.
+
+Nota sui bottoni: --color-button-* non compare qui di
+proposito - i valori restano gli stessi del tema chiaro
+perche' gia' verificati a contrasto sufficiente (6.29:1)
+anche su sfondo scuro. Riusare lo stesso brand-indaco
+del tema chiaro invece di uno nuovo piu' chiaro evita di
+scendere sotto la soglia minima di leggibilita' (il
+brand-indaco piu' chiaro usato per testo/accenti sotto,
+#818CF8, scende a 2.98:1 se usato come sfondo bottone -
+non sufficiente).
+============================================================
+*/
+
+[data-theme="dark"] {
+--bg-primary: #0F172A;
+--bg-secondary: #1E293B;
+--text-primary: #F8FAFC;
+--text-secondary: #94A3B8;
+--color-brand: #818CF8;
+--color-brand-hover: #A5B4FC;
+--color-border: #334155;
+}
+
+/*
+============================================================
+BREAKPOINT DI RIFERIMENTO (mobile-first)
+============================================================
+Le custom property non sono utilizzabili dentro la
+condizione di una media query (limite del linguaggio CSS,
+non di questo progetto) - vanno quindi riscritti come
+numero letterale in ogni .module.css che ne ha bisogno.
+Questi due valori sono lo standard fissato per l'intero
+progetto, da non modificare componente per componente:
+
+    tablet:  @media (min-width: 768px)
+    desktop: @media (min-width: 1024px)
+
+Approccio mobile-first: gli stili di base (fuori da ogni
+media query) sono pensati per schermo piccolo; le regole
+dentro @media AGGIUNGONO/sovrascrivono per schermi piu'
+grandi, non il contrario.
+============================================================
+*/
