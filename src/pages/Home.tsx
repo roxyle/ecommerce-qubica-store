@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import styles from './Home.module.css'
 
 import { getAllProducts, getProductsByCategory } from '../api/fakeStoreApi'
 import {useSearchParams } from 'react-router-dom'
 import type { Product } from '../types/product';
 import ProductCard from '../components/ProductCard/ProductCard';
+import ProductCardSkeleton from '../components/Skeleton/ProductCardSkeleton';
+import { useEffect, useState } from 'react';
 
 
 const Home = () => {
@@ -34,21 +36,29 @@ const Home = () => {
     }, [category]
   )
 
-  if(loading) return <p>Attendere...</p>
+  if (loading) {
+  return (
+    <div className={styles.grid}>
+      {Array.from({ length: 8 }).map((_, index) => (
+        <ProductCardSkeleton key={index} />
+      ))}
+    </div>
+  );
+}
+
   if(error) return <p>{error}</p>
   if (products.length === 0) return <p>Nessun prodotto trovato per questa categoria.</p>
 
 
   return (
 
-    <div>
-      {
-        products.map(
-          (product) => (
-            <ProductCard key={product.id} product={product} />
-          )
+
+    <div className={styles.grid}>
+      {products.map(
+        (product) => (
+          <ProductCard key={product.id} product={product} />
         )
-      }
+      )}
     </div>
   )
 }
