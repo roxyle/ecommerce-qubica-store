@@ -4,3 +4,11 @@
   gap: var(--spacing-lg);
   padding: var(--spacing-lg);
 }
+
+.loadingText {
+  margin: 0;
+  padding: var(--spacing-md) var(--spacing-lg) 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+}
+
