@@ -131,3 +131,17 @@ ENG: Day 3. Completed Sprint 1: routing with react-router-dom, Header with categ
 ITA: Nota tecnica interessante: React ha segnalato un warning (`react-hooks/set-state-in-effect`) sul reset manuale dello stato dentro un useEffect al cambio di un parametro. Ho chiesto a Claude di spiegarmelo, e la sua spiegazione rimandava alla documentazione ufficiale React sulla gestione dello stato nei componenti. L'ho verificata leggendo la pagina linkata. La soluzione (rimontare il componente tramite una key legata all'id, invece di resettare lo stato a mano) è quella consigliata dalla documentazione stessa.
 
 ENG: An interesting technical note: React flagged a warning (`react-hooks/set-state-in-effect`) about manually resetting state inside a useEffect when a parameter changes. I asked Claude to explain it, and the explanation pointed to React's own official documentation on state handling, which I verified by reading the linked page myself. The fix (remounting the component via a key tied to the id, instead of manually resetting state) is the one recommended by the documentation itself.
+
+![eslint-set-state-warning](docs/images/eslint-set-state-warning.png)
+
+---
+
+
+
+ITA: Giorni 4-5. Costruito il design system su CSS custom properties (variables.css): palette verificata con calcoli di contrasto WCAG AA su entrambi i temi (chiaro/scuro), scala di spaziatura, tipografia e breakpoint documentati come riferimento unico per tutti i componenti. Durante la verifica sono emersi e sono stati corretti due problemi di contrasto reali (bottone in dark mode e outline di focus). Ripulito index.css dal boilerplate di Vite rimasto dallo scaffold, che applicava un tema scuro automatico in conflitto col design system. Stilizzati tutti i componenti con CSS Modules: griglia responsive auto-fill, skeleton loader con testo visibile per lo stato di caricamento, header con categorie a scorrimento orizzontale (prima di scegliere il pattern ho confrontato come Amazon, Vinted e Arcaplanet gestiscono la navigazione per categorie su mobile, e tutte convergono su una fila di pill scorrevoli), pagina dettaglio con layout colonna/riga su breakpoint 768px. Aggiunta utility formatPrice basata su Intl.NumberFormat per uniformare i prezzi. Layout verificato su smartphone e tablet fisici oltre che da DevTools.
+
+![esempi nav pills altri ecommerce](docs/images/esempiNavpills.png)
+
+ENG: Days 4-5. Built the design system on CSS custom properties (variables.css): palette verified with WCAG AA contrast calculations on both themes (light/dark), spacing scale, typography and breakpoints documented as the single reference for all components. The verification surfaced two real contrast issues (dark mode button and focus outline), both fixed. Cleaned index.css from leftover Vite scaffold boilerplate, which applied an automatic dark theme conflicting with the design system. Styled all components with CSS Modules: responsive auto-fill grid, skeleton loader with visible text for the loading state, header with horizontally scrollable categories (before picking the pattern I compared how Amazon, Vinted and Arcaplanet handle category navigation on mobile, and they all converge on a scrollable pill row, so I adopted the same approach), detail page with column/row layout on the 768px breakpoint. Added a formatPrice utility based on Intl.NumberFormat to keep prices consistent. Layout verified on physical smartphone and tablet as well as DevTools.
+
+![LoadingSkeleton E QueryParam](docs/images/loadingSkeletonEQueryParam.png)
