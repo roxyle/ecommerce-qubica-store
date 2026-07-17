@@ -36,6 +36,13 @@
     top: 0.04em;
 }
 
+.nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+}
+
 .nav ul {
     display: flex;
     gap: var(--spacing-sm);
@@ -43,7 +50,7 @@
     list-style: none;
     margin: 0 calc(var(--spacing-sm) * -1);
     padding: var(--spacing-sm);
-    justify-content: safe center
+    max-width: 100%;
 }
 
 .nav a {
