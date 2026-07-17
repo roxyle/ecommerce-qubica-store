@@ -26,7 +26,9 @@ const Header = ({ theme, onToggleTheme }: HeaderProps) => {
   return (
 
     <header className={styles.header}>
+      
       <Link className={styles.logo} to="/">
+        <span className={styles.logoMark} aria-hidden="true">QS</span>
         <h1>Qubica Store</h1>
       </Link>
 

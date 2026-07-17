@@ -137,3 +137,44 @@ ENG: I enabled the dark/light theme: the infrastructure was already in place ([d
 ITA: Nota su Git: durante la chiusura di una sessione ho eseguito un amend su un commit già pushato (l'ordine corretto sarebbe stato amend prima, push dopo), creando una divergenza tra history locale e remota. Ho valutato due opzioni: scartare la riscrittura riallineandomi al remoto, o forzare l'aggiornamento del branch, e ho scelto un force push con --force-with-lease, la variante che rifiuta l'operazione se il remoto ha ricevuto push da altri nel frattempo: sicura in questo contesto (branch personale, nessun collaboratore). Lezione fissata: prima di ogni amend, verificare con git status che il commit non sia già stato pushato.
 
 ENG: Git note: during a session wrap-up I amended an already-pushed commit (the correct order would have been amend first, push after), creating a divergence between local and remote history. I weighed two options: discarding the rewrite by resetting to the remote, or force-updating the branch, and chose a force push with --force-with-lease, the variant that refuses the operation if the remote received pushes from others in the meantime: safe in this context (personal branch, no collaborators). Lesson learned: before any amend, check with git status that the commit hasn't already been pushed.
+
+![myAnalisi update](docs/images/photo_2026-07-17_17-08-29.jpg)
+## Checklist finale — dallo schema del giorno 1
+
+ITA: Lo schema disegnato a mano a inizio progetto (vedi sopra), rivisitato a consegna con lo stato di ogni voce.
+ENG: The hand-drawn outline from day 1 (see above), revisited at delivery with each item's status.
+
+**Requisiti obbligatori / Mandatory:** TypeScript, fakestoreapi.com — done
+
+- [x] **GITHUB**
+  - [x] Public
+  - [x] Readme
+    - [x] Local setup instructions
+    - [x] Eventuale uso AI / AI usage disclosure
+  - [x] Real workflow simulation
+    - [x] Main - dev branches
+    - [x] Pull request & merge
+- [x] **LAYOUT**
+  - [x] Header
+    - [x] Nome store
+    - [x] Logo store
+    - [x] Categories fetchate da API
+      - [x] Categorie da navbar (click su cat.)
+      - [x] Categorie da query param
+      - [x] URL update
+  - [x] Main
+    - [x] Home
+      - [x] Grid of cards (product image, name, price)
+      - [x] Onclick -> product detail view (image, name, price, description)
+  - [x] Mobile first responsive
+  - [x] HTML5 markup
+  - [x] CSS variables
+  - [x] Keyboard navigation
+  - [x] Alt attributes
+- [x] Unit test (Vitest)
+- [ ] State management *(parziale: stato sincronizzato via URL come single source of truth; nessuno store dedicato)*
+  - [x] Loaders e transizioni (skeleton)
+  - [x] Errors
+  - [x] Light/dark theme
+  - [ ] Add2cart counter
+  - [ ] Login/logout
