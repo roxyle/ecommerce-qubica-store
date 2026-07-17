@@ -3,7 +3,14 @@ import { useEffect, useState } from 'react';
 import { getAllCategories } from '../../api/fakeStoreApi';
 import styles from './Header.module.css'
 
-const Header = () => {
+
+type HeaderProps = {
+  theme: 'light' | 'dark';
+  onToggleTheme: () => void;
+};
+
+
+const Header = ({ theme, onToggleTheme }: HeaderProps) => {
   const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(
@@ -22,6 +29,15 @@ const Header = () => {
       <Link className={styles.logo} to="/">
         <h1>Qubica Store</h1>
       </Link>
+
+      <button
+        type="button"
+        className={styles.themeToggle}
+        onClick={onToggleTheme}
+        aria-label="Cambia tema visivo"
+      >
+        {theme === 'light' ? '🌛 Dark mode' : '🌞 Light mode'}
+      </button>
 
       <nav className={styles.nav}>
         <ul>
