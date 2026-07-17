@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getAllCategories } from '../../api/fakeStoreApi';
+import styles from './Header.module.css'
 
 const Header = () => {
   const [categories, setCategories] = useState<string[]>([]);
@@ -17,12 +18,12 @@ const Header = () => {
 
   return (
 
-    <header>
-      <Link to="/">
+    <header className={styles.header}>
+      <Link className={styles.logo} to="/">
         <h1>Qubica Store</h1>
       </Link>
 
-      <nav>
+      <nav className={styles.nav}>
         <ul>
           {
             categories.map(
