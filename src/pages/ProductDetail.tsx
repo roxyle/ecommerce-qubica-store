@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from './ProductDetail.module.css'
 import { getProduct } from '../api/fakeStoreApi'
 import { useParams } from 'react-router-dom'
