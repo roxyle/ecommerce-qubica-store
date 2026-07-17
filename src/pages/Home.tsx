@@ -38,10 +38,13 @@ const Home = () => {
 
   if (loading) {
   return (
-    <div className={styles.grid}>
+    <div aria-busy="true" aria-live="polite">
+      <p className={styles.loadingText}>Caricamento prodotti in corso...</p>
+      <div className={styles.grid}>
       {Array.from({ length: 8 }).map((_, index) => (
         <ProductCardSkeleton key={index} />
       ))}
+      </div>
     </div>
   );
 }
