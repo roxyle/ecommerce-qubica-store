@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-
+import styles from './ProductDetail.module.css'
 import { getProduct } from '../api/fakeStoreApi'
 import { useParams } from 'react-router-dom'
 import type { Product } from '../types/product';
+import { formatPrice } from '../utils/formatPrice';
 
 const ProductDetail = () => {
 
@@ -35,24 +36,17 @@ const ProductDetail = () => {
   if(error) return <p>{error}</p>
   if(!product) return <p>Prodotto non trovato</p>
 
-
   return (
-    <>
-    <div>
-      <h2>{product.title}</h2>
-      <p>€ {product.price}</p>
-      <div>
-        <img src={product.image} alt={product.title} />
+    <div className={styles.detail}>
+      <img src={product.image} alt={product.title} className={styles.image} />
+      <div className={styles.info}>
+        <h2 className={styles.title}>{product.title}</h2>
+        <p className={styles.price}>{formatPrice(product.price)}</p>
+        <p className={styles.description}>{product.description}</p>
       </div>
-      <p>{product.description}</p>
-
-
-
-
     </div>
-
-    </>
-  )
+  );
+  
 }
 
 export default ProductDetail
