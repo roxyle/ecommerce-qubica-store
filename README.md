@@ -138,7 +138,7 @@ ITA: Nota su Git: durante la chiusura di una sessione ho eseguito un amend su un
 
 ENG: Git note: during a session wrap-up I amended an already-pushed commit (the correct order would have been amend first, push after), creating a divergence between local and remote history. I weighed two options: discarding the rewrite by resetting to the remote, or force-updating the branch, and chose a force push with --force-with-lease, the variant that refuses the operation if the remote received pushes from others in the meantime: safe in this context (personal branch, no collaborators). Lesson learned: before any amend, check with git status that the commit hasn't already been pushed.
 
-![myAnalisi update](docs/images/photo_2026-07-17_17-08-29.jpg)
+
 ## Checklist finale — dallo schema del giorno 1
 
 ITA: Lo schema disegnato a mano a inizio progetto (vedi sopra), rivisitato a consegna con lo stato di ogni voce.
@@ -178,3 +178,6 @@ ENG: The hand-drawn outline from day 1 (see above), revisited at delivery with e
   - [x] Light/dark theme
   - [ ] Add2cart counter
   - [ ] Login/logout
+     
+
+![myAnalisi update](docs/images/photo_2026-07-17_17-08-29.jpg)
