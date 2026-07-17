@@ -5,10 +5,15 @@
     padding: var(--spacing-md);
     border-bottom: 1px solid var(--color-border);
     background-color: var(--bg-primary);
-    text-align: center
+    text-align: center;
+    align-items: center;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
     text-decoration: none;
     color: var(--text-primary);
     font-size: var(--font-size-logo);
@@ -16,6 +21,20 @@
 }
 .logo h1 { margin: 0; font-size: inherit; }
 
+.logoMark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8em;
+    height: 2em;
+    background-color: var(--color-brand);
+    color: var(--color-button-text);
+    border-radius: var(--border-radius);
+    font-size: 0.8em;
+    font-weight: 600;
+    position: relative;
+    top: 0.04em;
+}
 
 .nav ul {
     display: flex;
