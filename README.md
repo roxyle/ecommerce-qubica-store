@@ -18,6 +18,7 @@ with a product detail view and category filtering sync to the URL
 ## Local setup
 
 ITA: Prerequisiti: Node.js >= 20 (https://nodejs.org). Verifica con `node -v`
+
 ENG: Prerequisites: Node.js >= 20 (https://nodejs.org). Check with `node -v`
 
 ```
@@ -46,7 +47,7 @@ ITA: Questo progetto è stato sviluppato con l'assistenza di strumenti AI. Io ut
 - Analisi: eseguo prima io il lavoro (es. analisi, checklist dei requisiti, documentazione, ecc..), poi sottopongo lo stesso materiale a Claude e verifico se il suo output contene specifiche che non ho inserito o che mi sono sfuggite.
 - Sviluppo: scrivo io il codice su cui ho già un'idea precisa (logiche di stato, funzioni, useEffect, ...) mentre per alcune parti più dispersive (es. alcune sezioni molto verbose di CSS) delego l'AI per generare una bozza, che poi rileggo, verifico e sistemo prima di accettare.
 - Validazione: quando Claude propone qualcosa che non conosco o un'affermazione tecnica specifica, la verifico con una fonte primaria (documentazione ufficiale, forum di sviluppo tipo come stack overflow , ecc..), eseguo sempre verifiche diverse, dagli script di sviluppo (es. npm run dev), provo le build (npm run build) faccio dei test (npm test).
-- Others: a volte lo uso come paperella di gomma, tools fondamentale per qualsiasi sviluppatore
+- Others: a volte lo uso come paperella di gomma, tool fondamentale per qualsiasi sviluppatore 🦆
 
 
 Ho inoltre dimestichezza quotidiana con **file di contesto .md**, **schedulazione di task ricorrenti** (es. web scraping automatico giornaliero via connettore Apify) e **prompting**.
@@ -57,9 +58,12 @@ This project was developed with the assistance of AI tools. I use Claude (and ot
 - Analysis: I first do the work myself (e.g., analysis, requirement checklists, documentation, etc.), then I submit the same material to Claude and check whether its output contains specifications I didn’t include or that I may have overlooked.
 - Development: I write the code myself when I already have a clear idea of the logic (state management, functions, useEffect, ...). For more repetitive or verbose parts (e.g., certain long CSS sections), I let the AI generate a draft, which I then reread, verify, and refine before accepting.
 - Validation: qhen Claude suggests something I’m not familiar with or makes a specific technical claim, I verify it using a primary source (official documentation, developer forums like stack overflow, etc.). I always run multiple checks: development scripts (e.g., npm run dev), build tests (npm run build), and unit tests (npm test).
-- Others: sometimes I use it like the yellow rubber duck, developers foundamental tool 
+- Others: sometimes I use it like the yellow rubber duck, developers foundamental tool 🦆
 
 I also have daily experience with context .md files, scheduling recurring tasks (e.g., daily automated web scraping via Apify connector), and prompting.
+
+---
+
 
 1. ITA: Ho aperto il PDF, ho letto i requisiti, ho redatto una bozza dei punti chiave
    
