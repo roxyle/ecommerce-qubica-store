@@ -31,6 +31,14 @@ ITA: L'app è disponibile su http://localhost:5173. Per eseguire gli unit test: 
 
 ENG: The app runs at http://localhost:5173. To run unit tests: `npm test`. I also deployed it on Vercel https://ecommerce-qubica-store-sigma.vercel.app/
 
+ITA: Se si vuole provare la webapp da dispositivo mobile invece di `npm run dev` si può lanciare il comando  `npm run dev -- --host`.
+Nel terminale comparirà un indirizzo tipo `Network: http://192.168.x.x:5173/`, usare questo nel browser del proprio device, facendo attenzione che il telefono deve essere connesso alla stessa rete Wi-Fi del computer, altrimenti non si vedranno a vicenda.
+Se non si connette al primo tentativo, potrebbe essere il Firewall di Windows che blocca la connessione in entrata: se compare un popup di Windows che chiede se consentire l'accesso alla rete quando si lancia il comando, confermare.
+
+ENG: If you want to test the web app from a mobile device, instead of running npm run dev you can launch the command npm run dev -- --host.
+In the terminal you’ll see an address like `Network: http://192.168.x.x:5173/`, use that URL in your phone’s browser, making sure your phone is connected to the same Wi‑Fi network as your computer, otherwise the two devices won’t be able to communicate.
+If it doesn’t connect on the first try, Windows Firewall might be blocking incoming connections. If a Windows popup appears asking whether to allow network access when you run the command, make sure to confirm it.
+
 ## AI usage disclosure and how I work
 
 ITA: Questo progetto è stato sviluppato con l'assistenza di strumenti AI. Io utilizzo Claude (e altri strumenti AI) in modo diverso a seconda dell'obiettivo, alcuni esempi possono essere:
