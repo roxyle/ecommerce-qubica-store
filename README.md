@@ -22,7 +22,7 @@ ENG: Prerequisites: Node.js >= 20 (https://nodejs.org). Check with `node -v`
 
 ```
 git clone https://github.com/roxyle/ecommerce-qubica-store.git
-cd qubica-store
+cd ecommerce-qubica-store
 npm install
 npm run dev
 ```
